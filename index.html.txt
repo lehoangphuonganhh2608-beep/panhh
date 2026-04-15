@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>VIỆT NAM: 6 VÙNG KINH TẾ - XÃ HỘI</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* MENU */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.menu a.activeBtn {
+    background: #1abc9c;
+}
+
+/* BANNER */
+.banner {
+    height: 100vh;
+    background: url("https://i.postimg.cc/RVMnGFyw/IMG-2433.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* CONTENT */
+.content {
+    display: none;
+    padding: 80px 30px 30px;
+    background: #f5f5f5;
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+}
+
+.content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* ICON STYLE */
+.icon {
+    margin-right: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<div class="menu">
+    <a onclick="showPage('home', this)" class="activeBtn">🏠 Trang chủ</a>
+    <a onclick="showPage('vung1', this)">⛰ Bắc Bộ</a>
+    <a onclick="showPage('vung2', this)">🏙 Sông Hồng</a>
+    <a onclick="showPage('vung3', this)">🌊 Miền Trung</a>
+    <a onclick="showPage('vung4', this)">🌄 Tây Nguyên</a>
+    <a onclick="showPage('vung5', this)">💼 Đông Nam Bộ</a>
+    <a onclick="showPage('vung6', this)">🌾 ĐBSCL</a>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+    <div class="overlay">
+        <h1>VIỆT NAM: 6 VÙNG KINH TẾ - XÃ HỘI TRỌNG ĐIỂM</h1>
+        <p>Khám phá tiềm năng và đặc điểm từng vùng</p>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div id="home" class="content active">
+    <h2>🏠 Trang chủ</h2>
+    <p>
+        Việt Nam được chia thành 6 vùng kinh tế - xã hội dựa trên sự tương đồng về điều kiện tự nhiên,
+        lịch sử và tiềm năng phát triển. Việc phân vùng giúp tối ưu hóa nguồn lực địa phương và tăng
+        cường liên kết vùng trong kỷ nguyên số.
+    </p>
+</div>
+
+<div id="vung1" class="content">
+    <h2>⛰ Trung du và Miền núi phía Bắc</h2>
+    <p><strong>• Slogan:</strong> Cửa ngõ phía Bắc & Nguồn lực tài nguyên.</p>
+    <p><strong>• Điểm nhấn:</strong> Thế mạnh về thủy điện, khai khoáng và du lịch mạo hiểm.</p>
+</div>
+
+<div id="vung2" class="content">
+    <h2>🏙 Đồng bằng sông Hồng</h2>
+    <p><strong>• Slogan:</strong> Trung tâm Chính trị - Văn hóa - Khoa học.</p>
+    <p><strong>• Điểm nhấn:</strong> Hạ tầng hiện đại, nguồn nhân lực chất lượng cao và công nghiệp chế biến.</p>
+</div>
+
+<div id="vung3" class="content">
+    <h2>🌊 Bắc Trung Bộ và Duyên hải miền Trung</h2>
+    <p><strong>• Slogan:</strong> Mặt tiền biển Đông & Hành lang kinh tế.</p>
+    <p><strong>• Điểm nhấn:</strong> Kinh tế biển, cảng sâu và chuỗi đô thị du lịch quốc tế.</p>
+</div>
+
+<div id="vung4" class="content">
+    <h2>🌄 Tây Nguyên</h2>
+    <p><strong>• Slogan:</strong> Thủ phủ cây công nghiệp & Năng lượng tái tạo.</p>
+    <p><strong>• Điểm nhấn:</strong> Đất đỏ Bazan, cà phê xuất khẩu và bảo tồn văn hóa.</p>
+</div>
+
+<div id="vung5" class="content">
+    <h2>💼 Đông Nam Bộ</h2>
+    <p><strong>• Slogan:</strong> Đầu tàu kinh tế & Kết nối toàn cầu.</p>
+    <p><strong>• Điểm nhấn:</strong> Vùng năng động nhất, dẫn đầu FDI và tài chính.</p>
+</div>
+
+<div id="vung6" class="content">
+    <h2>🌾 Đồng bằng sông Cửu Long</h2>
+    <p><strong>• Slogan:</strong> Vựa nông sản & Thích ứng biến đổi khí hậu.</p>
+    <p><strong>• Điểm nhấn:</strong> Xuất khẩu gạo, thủy sản và kinh tế xanh.</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p><strong>🌏 ĐỊA LÍ VIỆT NAM</strong></p>
+    <p>Email: lehoangphuonganhh2608@gmail.com</p>
+    <p>© 2026 - All rights reserved</p>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function showPage(id, element) {
+    document.querySelectorAll('.content').forEach(p => {
+        p.classList.remove('active');
+    });
+
+    document.getElementById(id).classList.add('active');
+
+    document.querySelectorAll('.menu a').forEach(a => {
+        a.classList.remove('activeBtn');
+    });
+
+    element.classList.add('activeBtn');
+
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+}
+</script>
+
+</body>
+</html>
